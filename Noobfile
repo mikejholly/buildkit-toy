@@ -1,0 +1,9 @@
+with: golang:1.18-alpine
+commands:
+  - env FOO=bar
+  - cp main.go .
+  - cp go.mod .
+  - cp go.sum .
+  - execute env
+  - execute ls -l
+  - execute /bin/sh go build main.go -o /bin/noob .
